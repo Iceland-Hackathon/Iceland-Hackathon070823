@@ -15,7 +15,7 @@ const [allergies, setAllergies] = useState([])
     <div>
     <Header />
     <Filters allergies={allergies} diet={diet} setAllergies={setAllergies} setDiet={setDiet}/>
-    <ProductList />
+    <ProductList allergies={allergies} diet={diet} />
     </div>
   );
 }
