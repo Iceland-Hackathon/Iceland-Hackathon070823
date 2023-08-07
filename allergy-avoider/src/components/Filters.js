@@ -1,3 +1,4 @@
+import "./Filter.css";
 
 
 function Filters({diet, allergies, setDiet, setAllergies}) {
@@ -22,8 +23,9 @@ function handleAllergyChange(e) {
 console.log(diet)
 console.log(allergies)
 
+
   return (
-    <>
+    <div className="filters">
       {/* dietary requirements dropown */}
       <select onChange={handleDietChange}>
         <option value="">Dietary Preferences</option>
@@ -35,7 +37,11 @@ console.log(allergies)
       </select>
 
       {/* allergies checkbox */}
-      <label >
+
+      <div className="allergies">
+        <h3>Allergies</h3>
+        <div className="allergyLabels">
+        <label >
       <input type="checkbox" value="Peanuts" onChange={handleAllergyChange}/> Peanuts
       </label>
       <label >
@@ -44,8 +50,14 @@ console.log(allergies)
       <label >
       <input type="checkbox" value="Dairy" onChange={handleAllergyChange}/> Dairy
       </label>
+        </div>
+      </div>
+    </div>
+
+    
   
-    </>
+
+
   );
 }
 
