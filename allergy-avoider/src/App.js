@@ -1,14 +1,20 @@
 import './App.css';
 import Header from './components/Header';
-import React from 'react';
+import React, {useState} from 'react';
 import Filters from './components/Filters';
 import ProductList from './components/ProductList';
 
+
 function App() {
+const [diet, setDiet] = useState("")
+const [allergies, setAllergies] = useState([])
+
+
+
   return (
     <div>
     <Header />
-    <Filters />
+    <Filters allergies={allergies} diet={diet} setAllergies={setAllergies} setDiet={setDiet}/>
     <ProductList />
     </div>
   );
