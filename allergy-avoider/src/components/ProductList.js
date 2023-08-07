@@ -1,6 +1,5 @@
 import ProductCard from "./ProductCard";
 import dummyData from "../lib/dummyData.js";
-import { useState } from "react";
 
 // Function that filters the array and renders only the products that meet that criteria
 // useState to save the renderedList
@@ -11,22 +10,27 @@ import { useState } from "react";
 // Set a new variable newData
 // Set productsList to newData
 
+// GO through allergies array
+// For each entry in the allergies array, does it match any of the items in the dummyData
+
 function ProductList({ allergies, diet }) {
   // const [productList, setProductList] = useState(dummyData);
 
   const filteredArray = dummyData.filter((item) => {
     let dietaryPreference = diet === "" || item.dietaryPreference === diet;
-    return dietaryPreference;
+    let allergy = !item.allergens.some((allergen) =>
+      allergies.includes(allergen)
+    );
+    return dietaryPreference && allergy;
   });
 
-  // function filterDietryRequirements (dietaryPreference) {
-  //   if (dietaryPreference === diet)
-  //   setProductList(filteredArray)
-
-  // // const x = dummyData.filter(() =>
-  // //
-  // //);
-  // }
+  // const filteredArray2 = dummyData.filter((item) => {
+  //   // 'allergies' are the chosen checkboxes on the page
+  //   // 'allergens' is from the dummyData
+  //   return !item.allergens.some((allergen) => allergies.includes(allergen))
+  //   // let allergy = allergies === [] || item.allergens.includes(allergies)
+  //   // return allergy;
+  // });
 
   return (
     <div>
