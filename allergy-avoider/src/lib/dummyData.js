@@ -47,6 +47,17 @@ const productsData = [
     dietaryPreference: "None",
     allergens: ["Crustaceans"],
   },
+  {id: 9,
+    name: "Kosher Matzo Ball Soup",
+    dietaryPreference: "Kosher",
+    allergens: []
+  },
+  {
+    id:10,
+    name: "Chicken Soup",
+    dietaryPreference: "Halal",
+    allergens: ["Eggs"]
+  },
 ];
 
 export default productsData;
