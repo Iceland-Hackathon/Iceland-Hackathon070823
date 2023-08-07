@@ -33,7 +33,7 @@ console.log(allergies)
         <option value="Kosher">Kosher</option>
         <option value="Vegan">Vegan</option>
         <option value="Vegetarian">Vegetarian</option>
-        <option value="Pescetarian">Pescetarian</option>
+        <option value="Pescatarian">Pescatarian</option>
       </select>
 
       {/* allergies checkbox */}
